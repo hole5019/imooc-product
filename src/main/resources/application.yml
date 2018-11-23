@@ -1,0 +1,16 @@
+#spring:
+#  application:
+#    name: product
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: anjubaoykq
+#    url: jdbc:mysql://172.16.33.1:3306/testcloud?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#  jpa:
+#    show-sql: true
+#eureka:
+#  client:
+#    service-url:
+#      defalutZone: http://localhost:8761/eureka/
+#server:
+#  port: 8764
