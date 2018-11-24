@@ -10,13 +10,11 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by helei on 2018-11-14.
  */
 @Component
-public class ProductInfoDaoTest extends ImoocProductApplicationTests{
+public class ProductInfoDaoTest extends ImoocProductApplicationTests {
 
     @Autowired
     private ProductInfoDao productInfoDao;

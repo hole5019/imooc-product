@@ -1,15 +1,15 @@
 package com.imooc.product.controller;
 
-import com.imooc.product.dto.CartDTO;
+import com.imooc.product.common.DecreaseStockInput;
+import com.imooc.product.common.ProductInfoOutput;
 import com.imooc.product.entity.ProductCategory;
+import com.imooc.product.service.ProductService;
 import com.imooc.product.entity.ProductInfo;
 import com.imooc.product.service.CategoryService;
-import com.imooc.product.service.ProductService;
 import com.imooc.product.utils.ResultVoUtil;
 import com.imooc.product.vo.ProductInfoVo;
 import com.imooc.product.vo.ProductVo;
 import com.imooc.product.vo.ResultVo;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -81,17 +81,17 @@ public class ProductInfoController {
      * @return
      */
     @PostMapping("/listForOrder")
-    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList){
+    public List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList){
 
-        return productService.findByProductIdIn(productIdList);
+        return productService.findList(productIdList);
     }
 
     /**
      * 扣库存
-     * @param cartDTOList
+     * @param decreaseStockInputList
      */
     @PostMapping("/decreaseStock")
-    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList){
-        productService.decreaseStock(cartDTOList);
+    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList){
+        productService.decreaseStock(decreaseStockInputList);
     }
 }

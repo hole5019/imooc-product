@@ -1,8 +1,8 @@
 package com.imooc.product.service.impl;
 
-import com.imooc.product.dao.ProductCategoryDao;
 import com.imooc.product.entity.ProductCategory;
 import com.imooc.product.service.CategoryService;
+import com.imooc.product.dao.ProductCategoryDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
